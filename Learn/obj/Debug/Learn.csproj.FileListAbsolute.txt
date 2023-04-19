@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\Learn\Learn\bin\Debug\Learn.exe.config
+C:\Users\user\source\repos\Learn\Learn\bin\Debug\Learn.exe
+C:\Users\user\source\repos\Learn\Learn\bin\Debug\Learn.pdb
+C:\Users\user\source\repos\Learn\Learn\obj\Debug\Learn.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\Learn\Learn\obj\Debug\Learn.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\Learn\Learn\obj\Debug\Learn.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Learn\Learn\obj\Debug\Learn.exe
+C:\Users\user\source\repos\Learn\Learn\obj\Debug\Learn.pdb
+C:\Users\user\source\repos\Learn\Learn\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\user\source\repos\Learn\Learn\obj\Debug\Learn.csproj.CopyComplete
