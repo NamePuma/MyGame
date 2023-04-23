@@ -21,7 +21,7 @@ namespace Learn
 
         public abstract void Reaction(CreatePerson person);
 
-        public abstract void Action(CreatePerson person);
+       
 
         
         

@@ -21,16 +21,26 @@ namespace Learn
 
     public class Program
     {
-        
+
         static void Main(string[] args)
         {
             BasicThread basicThread = new BasicThread();
-            Room rooms = new Room("Твоя комната", CreatePersonThread.returnPerson());
-            rooms.AddInSideObject(BoxRoom.sides.center, new GeneralObjects("Стол", "На столе лежат канцелярские вещи. Там лежит яблоко.\n\rЗапахло скукой...", true),
-                new GeneralObjects("Кресло качели", "Вы любите засыпать на них"));
-            rooms.AddInSideObject(BoxRoom.sides.south, new GeneralObjects("Окно", "Просто окно"));
-            rooms.Go(BoxRoom.sides.center);
-            Console.ReadLine();
+            Room myRoom = new Room("Моя комната", CreatePersonThread.returnPerson());
+            myRoom.AddInSideObject(BoxRoom.sides.north,
+                new GameObjectWithCount("Окно", "За окном яркий день"),
+                new GameObjectWithCount("Картина", "Криво нарисованая картина.\r\nКажется она ваша"),
+                new GameObjectWithCount("Стол", "На столе лежать разные скучну вещи",
+                delegate
+                {
+     
+                    Whither.DontClear("На столе лежит яблоко.\r\nВзять его?");
+                    string answer = Whither.Swith("Да", "Нет"); if (answer == "Да")
+                        { CreatePersonThread.returnPerson().GiveInInventory(new MicroObject("Яблоко", "Вкусное заливное")); }
+                    else { Console.WriteLine("Вы не любите яблоки"); }
+                }, delegate { Console.WriteLine("На столе лежать вещи"); }),
+                new GameObjectWithCount("Дверь", "Просто дверь. \r\nМожно выйти(Восток)")
+                ) ;
+            myRoom.Go(BoxRoom.sides.north);
 
         }
     }

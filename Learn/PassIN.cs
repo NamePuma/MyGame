@@ -16,16 +16,13 @@ namespace Learn
             Description = "Описание";
         }
 
-        public override void Action(CreatePerson person)
-        {
-            
-        }
+       
         public void Action(Side side, Side sideAbroad, BoxRoom.sides sides)
         {
             Whither.DontClear(Messeds.WHEREGO, Messeds.BORDER);
             
             if (sides == BoxRoom.sides.south)
-            {
+            { 
                 var strSide = Whither.Swith(Messeds.NORTH, Messeds.CENTER);
                 switch (strSide)
                 {

@@ -15,7 +15,7 @@ namespace Learn
         {
             Console.WriteLine(Messeds.CORRENTROOM + Name);
             Console.WriteLine(Messeds.BORDER);
-            Console.WriteLine(currentSide);
+            Console.WriteLine(Name + ": " +currentSide);
             Console.WriteLine(Messeds.BORDER);
             Console.WriteLine(Messeds.CORRENTPERSON + person.Name);
             Console.WriteLine();

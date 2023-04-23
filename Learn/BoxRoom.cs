@@ -10,7 +10,7 @@ namespace Learn
 {
     public abstract class BoxRoom : ShowInConsole
     {
-        
+        private bool cansouth = false;
         public enum sides { center, south, north, east, west}
         protected CreatePerson person = null;
          
@@ -230,11 +230,32 @@ namespace Learn
             Console.ReadKey(true);
             Console.Clear();
         }
-        protected abstract void selectedSouth();
-        protected abstract void selectedNorth();
-        protected abstract void selectedEast();
-        protected abstract void selectedWest();
+        protected virtual  void selectedSouth()
+        {
+            NonGo();
+            Go(sides.north);
+        }
+        protected virtual void selectedNorth()
+        {
+            NonGo();
+            Go(sides.south);
+        }
+        protected virtual void selectedEast()
+        {
+            NonGo();
+            Go(sides.west);
+        }
+        protected  virtual void selectedWest()
+        {
+            NonGo();
+            Go(sides.east);
+        }
 
-        
+        protected virtual void NonGo()
+        {
+            Console.WriteLine("Прохода нет");
+            Console.ReadKey();
+            Console.Clear();
+        }
     }
 }

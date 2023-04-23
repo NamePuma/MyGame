@@ -55,9 +55,10 @@
     <Compile Include="CreatePerson.cs" />
     <Compile Include="CreatePersonThread.cs" />
     <Compile Include="GameObjec.cs" />
-    <Compile Include="GeneralObjects.cs" />
+    <Compile Include="GameObjectWithCount.cs" />
     <Compile Include="Interface4.cs" />
     <Compile Include="Messeds.cs" />
+    <Compile Include="MicroObject.cs" />
     <Compile Include="Music.cs" />
     <Compile Include="PassIN.cs" />
     <Compile Include="Program.cs" />

@@ -16,7 +16,7 @@ namespace Learn
         public int health { get; private set; } = 100;
         public Enum Sex { get; private set; }
 
-        public List<GameObjec> Inventory { get; private set; }
+        public List<GameObjec> Inventory { get; private set; } = new List<GameObjec>();
 
         public CreatePerson(string name, int age, sex sex)
         {
@@ -40,8 +40,12 @@ namespace Learn
         }
         public void GiveInInventory(GameObjec item)
         {
-            if (Inventory != null) { 
-            Inventory.Add(item);
+            if (item != null) {
+                
+                Inventory.Add(item);
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine(item.Name + " был добавлен в инвентарь!");
+                Console.ResetColor();
             }
         }
 
